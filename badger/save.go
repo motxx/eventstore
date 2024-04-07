@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 
 	"github.com/dgraph-io/badger/v4"
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 	"github.com/nbd-wtf/go-nostr"
 	nostr_binary "github.com/nbd-wtf/go-nostr/binary"
 )

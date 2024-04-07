@@ -3,7 +3,7 @@ package slicestore
 import (
 	"context"
 
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 	"github.com/nbd-wtf/go-nostr"
 	"golang.org/x/exp/slices"
 )

@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/PowerDNS/lmdb-go/lmdb"
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 	"github.com/nbd-wtf/go-nostr"
 	nostr_binary "github.com/nbd-wtf/go-nostr/binary"
 )

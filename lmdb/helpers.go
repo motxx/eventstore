@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 
 	"github.com/PowerDNS/lmdb-go/lmdb"
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 	"github.com/nbd-wtf/go-nostr"
 	"golang.org/x/exp/slices"
 )

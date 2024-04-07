@@ -1,10 +1,10 @@
 package postgresql
 
 import (
-	"github.com/fiatjaf/eventstore"
 	"github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx/reflectx"
 	_ "github.com/lib/pq"
+	"github.com/motxx/eventstore"
 )
 
 const (

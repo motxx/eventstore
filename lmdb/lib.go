@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 
 	"github.com/PowerDNS/lmdb-go/lmdb"
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 	bolt "go.etcd.io/bbolt"
 )
 

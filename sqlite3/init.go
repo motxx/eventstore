@@ -1,10 +1,10 @@
 package sqlite3
 
 import (
-	"github.com/fiatjaf/eventstore"
 	"github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx/reflectx"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/motxx/eventstore"
 )
 
 const (

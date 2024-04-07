@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/dgraph-io/badger/v4"
-	"github.com/fiatjaf/eventstore"
+	"github.com/motxx/eventstore"
 )
 
 const (
