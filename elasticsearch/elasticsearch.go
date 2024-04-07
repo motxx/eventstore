@@ -164,7 +164,7 @@ func (ess *ElasticsearchStorage) SaveEvent(ctx context.Context, evt *nostr.Event
 	err = ess.bi.Add(
 		ctx,
 		esutil.BulkIndexerItem{
-			Action:     "index",
+			Action:     "create",
 			DocumentID: evt.ID,
 			Body:       bytes.NewReader(data),
 			OnSuccess: func(ctx context.Context, item esutil.BulkIndexerItem, res esutil.BulkIndexerResponseItem) {
@@ -174,8 +174,13 @@ func (ess *ElasticsearchStorage) SaveEvent(ctx context.Context, evt *nostr.Event
 				if err != nil {
 					done <- err
 				} else {
-					err := fmt.Errorf("ERROR: %s: %s", res.Error.Type, res.Error.Reason)
-					done <- err
+					if res.Status == 409 {
+						err := eventstore.ErrDupEvent
+						done <- err
+					} else {
+						err := fmt.Errorf("ERROR: %s: %s", res.Error.Type, res.Error.Reason)
+						done <- err
+					}
 				}
 			},
 		},
