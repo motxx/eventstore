@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"strings"
 	"time"
 
@@ -159,6 +160,7 @@ func (ess *ElasticsearchStorage) SaveEvent(ctx context.Context, evt *nostr.Event
 
 	// adapted from:
 	// https://github.com/elastic/go-elasticsearch/blob/main/_examples/bulk/indexer.go#L196
+	log.Printf("Indexing event %s", evt.ID)
 	err = ess.bi.Add(
 		ctx,
 		esutil.BulkIndexerItem{
